@@ -1,0 +1,113 @@
+/** @import must precede all other statements */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Tailwind CSS theme
+   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
+   * A different format will require also updating the theme in tailwind.config.ts.
+  */
+  :root {
+    --background: 24 21% 6%;
+    --foreground: 35 32% 94%;
+
+    --card: 24 18% 10%;
+    --card-foreground: 35 32% 94%;
+
+    --popover: 24 18% 10%;
+    --popover-foreground: 35 32% 94%;
+
+    --primary: 28 36% 58%;
+    --primary-foreground: 27 52% 11%;
+
+    --secondary: 24 16% 16%;
+    --secondary-foreground: 35 32% 92%;
+
+    --muted: 24 12% 24%;
+    --muted-foreground: 32 18% 72%;
+
+    --accent: 28 18% 22%;
+    --accent-foreground: 35 32% 94%;
+
+    --destructive: 6 72% 55%;
+    --destructive-foreground: 24 21% 6%;
+
+    --border: 26 14% 24%;
+    --input: 26 14% 24%;
+    --ring: 28 36% 58%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 24 16% 12%;
+    --sidebar-foreground: 35 32% 92%;
+
+    --sidebar-primary: 28 36% 58%;
+
+    --sidebar-primary-foreground: 27 52% 11%;
+
+    --sidebar-accent: 24 16% 18%;
+
+    --sidebar-accent-foreground: 35 32% 92%;
+
+    --sidebar-border: 26 14% 24%;
+
+    --sidebar-ring: 28 36% 58%;
+  }
+
+  .dark {
+    --background: 36 32% 94%;
+    --foreground: 24 24% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 24 24% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 24 24% 12%;
+
+    --primary: 24 24% 18%;
+    --primary-foreground: 35 32% 94%;
+
+    --secondary: 30 16% 90%;
+    --secondary-foreground: 24 24% 12%;
+
+    --muted: 30 16% 88%;
+    --muted-foreground: 24 24% 28%;
+
+    --accent: 24 18% 42%;
+    --accent-foreground: 35 32% 94%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 30 20% 84%;
+    --input: 30 20% 84%;
+    --ring: 28 36% 38%;
+
+    --sidebar-background: 36 32% 94%;
+    --sidebar-foreground: 24 24% 12%;
+    --sidebar-primary: 24 18% 42%;
+    --sidebar-primary-foreground: 35 32% 94%;
+    --sidebar-accent: 0 0% 100%;
+    --sidebar-accent-foreground: 24 24% 12%;
+    --sidebar-border: 30 20% 84%;
+    --sidebar-ring: 28 36% 38%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    background-image: radial-gradient(circle at 18% 20%, hsl(35 32% 94% / 0.09), transparent 55%),
+      radial-gradient(circle at 80% 0%, hsl(28 36% 58% / 0.13), transparent 45%),
+      linear-gradient(135deg, hsl(22 20% 10%), hsl(24 24% 6%) 68%, hsl(28 26% 12%));
+    background-attachment: fixed;
+  }
+}
